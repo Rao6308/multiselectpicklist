@@ -1,0 +1,19 @@
+.THIS .divlimit {
+    max-width: 300px;
+}
+.THIS .firstdiv{
+  float: left;
+  width: 300px;
+}
+.THIS .seconddiv{
+  float: left;
+  width: 200px;
+}
+.THIS .thirddiv{
+  float: left;
+  width: 300px;
+}
+.THIS .buttonpos{
+    margin-top : -20%;
+    left: 50%;
+}

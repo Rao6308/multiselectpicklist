@@ -1,0 +1,61 @@
+<aura:component >
+<ltng:require scripts="{!$Resource.Jquery2_2_4}" afterScriptsLoaded="{!c.doInit}" />
+
+<aura:attribute name="leftsidelist" type="List" default="opt1,opt2,opt3"/>
+<aura:attribute name="rightsidelist" type="List" default="opt4,opt5,opt6"/>
+
+<div class="slds-form-element" >
+   <div class="slds-form-element__control divlimit thirddiv">
+    <label class="slds-form-element__label" for="select-01">All Available Label</label>
+    
+        <select id="select-01" class="slds-select" multiple="multiple">
+       
+        <aura:iteration items="{!v.leftsidelist}" var="left">
+           <option value="{!left}"> 
+               {!left}
+           </option>
+       </aura:iteration>
+      
+    </select>
+  </div>
+  
+  <div class="slds-form-element__control divlimit seconddiv">
+    <br/><br/>
+      <button class="slds-button slds-button_icon buttonpos" id="moverightbutton" title="Move selected right" onclick="{!c.moveright}">
+          <lightning:icon iconName="utility:chevronright" size="xx-small" alternativeText="Right Arrow"/> 
+      </button>
+      <br/> <br/> 
+      
+      <button class="slds-button slds-button_icon buttonpos" title="Move selected Left" onclick="{!c.moveleft}">
+      <lightning:icon iconName="utility:chevronleft" size="xx-small" alternativeText="Left Arrow"/> 
+      </button>
+      <br/> <br/> 
+      
+      <button class="slds-button slds-button_icon buttonpos" title="Move All to right" onclick="{!c.movealltoright}">
+      <lightning:icon iconName="utility:right" size="xx-small" alternativeText="move all to right"/>
+      </button>
+      <br/> <br/> 
+      
+      <button class="slds-button slds-button_icon buttonpos" title="Move All to Left" onclick="{!c.movealltoleft}">
+      <lightning:icon iconName="utility:left" size="xx-small" alternativeText="move all to left"/>
+      </button>
+
+  </div>
+  
+  <div class="slds-form-element__control divlimit thirddiv">
+    <label class="slds-form-element__label" for="select-02">Selected Labels</label>
+    <select id="select-02" class="slds-select" multiple="multiple">
+     
+      <aura:iteration items="{!v.rightsidelist}" var="right">
+          
+             <option value="{!right}"> 
+               {!right}
+             </option>
+          
+       </aura:iteration>
+      
+    </select>
+  </div>
+  
+</div>
+</aura:component>
