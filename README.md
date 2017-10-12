@@ -1,4 +1,9 @@
 # multiselectpicklist
+
+Update: Salesforce has released a duallistbox which is anyday native and supported solution than using this git.
+ref : https://developer.salesforce.com/docs/atlas.en-us.lightning.meta/lightning/aura_compref_lightning_dualListbox.htm
+
+
 Multi Select picklist that can move values from left to right.
 
 Used a mash of Jquery and lightning. Jquery for getting the selected values and modifying the DOM. 
